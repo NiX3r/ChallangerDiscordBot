@@ -102,6 +102,7 @@
     <Compile Include="Events\HandleCommandAsyncEvent.cs" />
     <Compile Include="Events\HandleDisconnetConnectEvent.cs" />
     <Compile Include="Events\HandleGuildAvailableEvent.cs" />
+    <Compile Include="Events\HandlePrivateMessageEvent.cs" />
     <Compile Include="Events\HandleReactionAddedRemovedEvent.cs" />
     <Compile Include="Instances\nChallenger.cs" />
     <Compile Include="Instances\nGuild.cs" />

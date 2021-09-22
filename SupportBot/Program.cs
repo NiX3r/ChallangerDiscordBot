@@ -36,6 +36,7 @@ namespace SupportBot
             ProgramVariables._commands = new CommandService();
             ProgramVariables._services = new ServiceCollection().AddSingleton(ProgramVariables._client).AddSingleton(ProgramVariables._commands).BuildServiceProvider();
             ProgramVariables._client.Log += BotUtils._client_Log;
+            BotUtils.RegisterPrivateMessageEvent();
             BotUtils.RegisterDisconnectConnect();
             BotUtils.RegisterGuildAvaible();
             BotUtils.RegisterReactionAdded();

@@ -85,6 +85,8 @@ namespace SupportBot.Modules
                 nTask task = new nTask(name, maxPoints, this.Context.User.Username, start, end, message, channel);
                 task.ID = DatabaseMethods.AddTask(task);
 
+                await ReplyAsync($"Task added. Its ID is `{task.ID}`");
+
             }
             else
                 await ReplyAsync("Bad input!");

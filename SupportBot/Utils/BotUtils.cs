@@ -1,4 +1,5 @@
-﻿using Discord;
+﻿using ChallengerDiscordBot.Events;
+using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
 using SupportBot.Events;
@@ -19,6 +20,11 @@ namespace SupportBot.Utils
         {
             Console.WriteLine(arg);
             return Task.CompletedTask;
+        }
+
+        public static void RegisterPrivateMessageEvent()
+        {
+            ProgramVariables._client.MessageReceived += HandlePrivateMessageEvent.HandlePrivateMessage;
         }
 
         public static void RegisterGuildAvaible()
